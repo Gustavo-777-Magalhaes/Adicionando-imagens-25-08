@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <section>
+        <a href="#" class="sombra">Ver todos os produtos</a>
+        
+        <!-- O atributo action aponta para o arquivo PHP que processará o formulário -->
+        <form action="cadastrar.php" method="post" enctype="multipart/form-data">
+            <h1>ENVIO DE IMAGENS</h1>
+            
+            <label for="nome">Nome do Produto</label>
+            <input type="text" name="nome" id="nome" class="sombra" required>
+
+            <label for="desc">Descrição</label>
+            <textarea name="desc" id="desc" class="sombra" required></textarea>
+
+            <label for="val">Valor</label>
+            <input type="number" name="valor" id="val" class="sombra" step="0.01" min="0" required>
+
+            <label for="foto">Imagens do Produto</label>
+            <!-- O atributo multiple e foto[] permitem selecionar e enviar várias imagens -->
+            <input type="file" name="foto[]" multiple id="foto" class="sombra meuInput">
+
+            <input type="submit" id="botao" value="Enviar">
+        </form>
+    </section>
+</body>
+</html>
